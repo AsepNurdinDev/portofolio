@@ -20,7 +20,7 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-white transition"
+      className=" justify-center m-1 rounded-full px-3 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-white transition"
       title="Toggle dark mode"
     >
       {isDark ? "🌙" : "☀️"}

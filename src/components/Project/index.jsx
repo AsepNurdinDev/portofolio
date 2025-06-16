@@ -1,40 +1,39 @@
 const Project = () => {
   return (
-    <div>
-      <section className="bg-white dark:bg-gray-900 py-12 transition-colors">
+    <div data-aos="fade-right" id="project">
+      <section className="fonts-popins bg-white dark:bg-gray-900 py-12 transition-colors">
         <div className="max-w-screen-xl mx-auto px-6">
           <h2
             id="project"
             className="text-2xl font-bold text-gray-800 dark:text-white mb-10"
           >
             Project Saya
+            <p className="text-xl mt-2 font-normal font-poppins text-gray-600 mb-2">
+              Berikut adalah beberapa Project saya
+            </p>
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            data-aos="fade-up"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {[
               {
-                img: "../img/project1.jpg",
-                title: "Website Portfolio",
-                desc: "Sebuah website portfolio pribadi untuk menampilkan karya dan keahlian saya.",
+                img: "./img/image.png",
+                title: "Website Kursus Coding",
+                desc: "Sebuah website Kursus Coding yang menyediakan berbagai kelas dan materi bermutu",
                 tech: ["React", "TailwindCSS", "Framer Motion"],
-                link: "#",
+                link: "https://kursus-coding.vercel.app/",
               },
               {
-                img: "../img/project2.jpg",
-                title: "E-commerce App",
-                desc: "Sistem toko online sederhana dengan fitur keranjang belanja dan checkout.",
-                tech: ["Laravel", "MySQL", "Bootstrap"],
-                link: "#",
+                img: "./img/tools/tool/bntea.png",
+                title: "Website Kursus Coding",
+                desc: "Sebuah website Kursus Coding yang menyediakan berbagai kelas dan materi bermutu",
+                tech: ["React", "TailwindCSS", "Framer Motion"],
+                link: "https://bntea-culinary.vercel.app/",
               },
-              {
-                img: "../img/project3.jpg",
-                title: "Blog Platform",
-                desc: "Platform blogging dengan autentikasi user dan fitur CRUD postingan.",
-                tech: ["Node.js", "Express", "MongoDB"],
-                link: "#",
-              },
-              // Contoh pengulangan untuk testing
-              ...Array(7).fill({
+
+              ...Array().fill({
                 img: "../img/project4.jpg",
                 title: "Dashboard Admin",
                 desc: "Sistem dashboard admin untuk mengelola data user dan laporan secara real-time.",
