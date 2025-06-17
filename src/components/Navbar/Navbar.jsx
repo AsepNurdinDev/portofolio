@@ -33,7 +33,7 @@ const Navbar = () => {
       >
         <div className="max-w-5xl mx-auto w-[90%] px-4 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
-            Asep Nurdin
+            Asep <span className="text-blue-600 dark:text-white">Nurdin</span>
           </div>
 
           {/* Desktop Menu */}
@@ -56,6 +56,12 @@ const Navbar = () => {
               className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 hover:underline dark:hover:text-indigo-400 font-medium"
             >
               Projects
+            </a>
+            <a
+              href="#"
+              className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 hover:underline dark:hover:text-indigo-400 font-medium"
+            >
+              Blog
             </a>
             <a
               href="#contact"

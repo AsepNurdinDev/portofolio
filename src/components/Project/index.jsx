@@ -22,14 +22,14 @@ const Project = () => {
                 img: "./img/image.png",
                 title: "Website Kursus Coding",
                 desc: "Sebuah website Kursus Coding yang menyediakan berbagai kelas dan materi bermutu",
-                tech: ["React", "TailwindCSS", "Framer Motion"],
+                tech: ["React", "Express.js", "TailwindCSS", "MySQL"],
                 link: "https://kursus-coding.vercel.app/",
               },
               {
                 img: "./img/tools/tool/bntea.png",
                 title: "Website Kursus Coding",
                 desc: "Sebuah website Kursus Coding yang menyediakan berbagai kelas dan materi bermutu",
-                tech: ["React", "TailwindCSS", "Framer Motion"],
+                tech: ["HTML", "TailwindCSS", "JavaScript"],
                 link: "https://bntea-culinary.vercel.app/",
               },
 
