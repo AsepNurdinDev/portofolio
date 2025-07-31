@@ -8,7 +8,7 @@ const Project = () => {
             className="text-2xl font-bold text-gray-800 dark:text-white mb-10"
           >
             Project Saya
-            <p className="text-xl mt-2 font-normal font-poppins text-gray-600 mb-2">
+            <p className="text-xl mt-2 font-normal font-poppins text-gray-300 mb-2">
               Berikut adalah beberapa Project saya
             </p>
           </h2>
@@ -27,19 +27,20 @@ const Project = () => {
               },
               {
                 img: "./img/tools/tool/bntea.png",
-                title: "Website Kursus Coding",
-                desc: "Sebuah website Kursus Coding yang menyediakan berbagai kelas dan materi bermutu",
+                title: "Website Kasir",
+                desc: "Sebuah website Kasir untuk mengelola pesenanan pelanggan dan mengelola pemasukan dana",
                 tech: ["HTML", "TailwindCSS", "JavaScript"],
                 link: "https://bntea-culinary.vercel.app/",
               },
+              {
+                img: "./img/tools/tool/hijab.png",
+                title: "Website Online Shop Hijab",
+                desc: "Sebuah website Online Shop Hijab yang menawarkan berbagai model hijab kekinian dan juga tutorial cara pakainya",
+                tech: ["PHP", "TailwindCSS", "MySQL"],
+                link: "",
+              },
 
-              ...Array().fill({
-                img: "../img/project4.jpg",
-                title: "Dashboard Admin",
-                desc: "Sistem dashboard admin untuk mengelola data user dan laporan secara real-time.",
-                tech: ["React", "Tailwind", "Firebase"],
-                link: "#",
-              }),
+              ...Array().fill({}),
             ].map((project, index) => (
               <div
                 key={index}
@@ -48,7 +49,7 @@ const Project = () => {
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="h-48 w-full object-cover"
+                  className="w-full h-48 object-contain bg-white"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">

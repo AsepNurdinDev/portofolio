@@ -1,10 +1,10 @@
-import { Facebook, Instagram, Github, Linkedin } from "lucide-react"; // jika pakai shadcn/ui atau lucide dev
+import { Facebook, Instagram, Github, Linkedin } from "lucide-react"; 
 
 const Footer = () => {
   return (
     <footer className="bg-gray-100 dark:bg-gray-900">
       <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="flex justify-center text-gray-900 text-xl dark:text-indigo-600">
+        <div className="flex justify-center text-gray-900 text-xl dark:text-gray-200">
           <p data-aos="fade-right">Asep Nurdin</p>
         </div>
 
