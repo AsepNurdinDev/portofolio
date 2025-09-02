@@ -8,7 +8,7 @@ const Project = () => {
             className="text-2xl font-bold text-gray-800 dark:text-white mb-10"
           >
             Project Saya
-            <p className="text-xl mt-2 font-normal font-poppins text-gray-300 mb-2">
+            <p className="text-xl mt-2 font-normal font-poppins text-gray-600 mb-2">
               Berikut adalah beberapa Project saya
             </p>
           </h2>
@@ -37,7 +37,7 @@ const Project = () => {
                 title: "Website Online Shop Hijab",
                 desc: "Sebuah website Online Shop Hijab yang menawarkan berbagai model hijab kekinian dan juga tutorial cara pakainya",
                 tech: ["PHP", "TailwindCSS", "MySQL"],
-                link: "",
+                link: "https://hijabaulia.42web.io/index.php?i=2",
               },
 
               ...Array().fill({}),

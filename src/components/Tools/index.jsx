@@ -52,12 +52,12 @@ const Tools = () => {
                 desc: "UI/UX Design Tool",
               },
               {
-                img: "./img/tools/tool/nextjs.png",
-                title: "Next.js",
+                img: "./img/tools/tool/express.png",
+                title: "Express.js",
                 desc: "JavaScript Framework",
               },
               {
-                img: "./img/tools/tool/laravel-php.png",
+                img: "./img/tools/tool/laravel2.png",
                 title: "Laravel",
                 desc: "PHP Framework",
               },
