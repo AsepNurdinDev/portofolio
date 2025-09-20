@@ -8,7 +8,7 @@ const Project = () => {
             className="text-2xl font-bold text-gray-800 dark:text-white mb-10"
           >
             Project Saya
-            <p className="text-xl mt-2 font-normal font-poppins text-gray-600 mb-2">
+            <p className="text-xl mt-2 font-normal font-poppins text-gray-400 mb-2">
               Berikut adalah beberapa Project saya
             </p>
           </h2>
@@ -19,37 +19,44 @@ const Project = () => {
           >
             {[
               {
-                img: "./img/image.png",
+                img: "./img/project/2.png",
                 title: "Website Kursus Coding",
                 desc: "Sebuah website Kursus Coding yang menyediakan berbagai kelas dan materi bermutu",
                 tech: ["React", "Express.js", "TailwindCSS", "MySQL"],
                 link: "https://kursus-coding.vercel.app/",
               },
               {
-                img: "./img/tools/tool/bntea.png",
+                img: "./img/project/4.png",
                 title: "Website Kasir",
                 desc: "Sebuah website Kasir untuk mengelola pesenanan pelanggan dan mengelola pemasukan dana",
                 tech: ["HTML", "TailwindCSS", "JavaScript"],
                 link: "https://bntea-culinary.vercel.app/",
               },
               {
-                img: "./img/tools/tool/hijab.png",
+                img: "./img/project/3.png",
                 title: "Website Online Shop Hijab",
                 desc: "Sebuah website Online Shop Hijab yang menawarkan berbagai model hijab kekinian dan juga tutorial cara pakainya",
                 tech: ["PHP", "TailwindCSS", "MySQL"],
                 link: "https://hijabaulia.42web.io/index.php?i=2",
+              },
+              {
+                img: "./img/project/cv.dwijayengabadi.png",
+                title: "Website Company Profile",
+                desc: "Sebuah website company profile yang dimana perusahaan tersebut bergerak di bidang suplier telur, minyak, beras, dan gas LPG.",
+                tech: ["NextJS", "TailwindCSS", "JavaScript"],
+                link: "https://www.dwijaabadi.com/",
               },
 
               ...Array().fill({}),
             ].map((project, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-700 transition-shadow duration-300 overflow-hidden"
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl dark:shadow-gray-700 transition-shadow duration-300 overflow-hidden"
               >
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="w-full h-48 object-contain bg-white"
+                  className="w-auto h-48 object-contain bg-white"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
