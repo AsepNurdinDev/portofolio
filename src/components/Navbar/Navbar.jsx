@@ -1,122 +1,98 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import DarkModeToggle from "../DarkMode/DarkModeToggle";
-import { div } from "framer-motion/client";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const toggleMenu = () => setOpen(!open);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // PERBAIKAN: Memetakan href dengan benar & menambahkan flag 'isExternal'
+  const navLinks = [
+    { name: "Home", href: "#", isExternal: false },
+    { name: "About", href: "#about", isExternal: false },
+    { name: "Projects", href: "#project", isExternal: false }, // Diarahkan ke ID seksi internal
+    { name: "Blog", href: "https://asepblog.my.id/", isExternal: true }, // Diarahkan ke domain blog kamu
+    { name: "Contact", href: "#contact", isExternal: false },
+  ];
+
   return (
-    <div>
+    <div className="fixed top-0 left-0 right-0 z-50 w-full px-4 sm:px-6 lg:px-8 transition-all duration-500 pt-4">
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 mx-auto max-w-screen-xl transition-all duration-300 ${
-          isVisible
-            ? "backdrop-blur bg-white/70 dark:bg-gray-900/70 "
-            : "bg-transparent"
+        className={`mx-auto max-w-5xl w-full transition-all duration-300 rounded-2xl border ${
+          scrolled
+            ? "backdrop-blur-md bg-white/40 dark:bg-slate-950/40 border-white/20 dark:border-slate-800/50 shadow-lg shadow-slate-900/5"
+            : "bg-transparent border-transparent"
         }`}
       >
-        <div className="max-w-5xl mx-auto w-[90%] px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
-            Asep <span className="text-blue-600 dark:text-white">Nurdin</span>
+        <div className="px-6 py-3 flex justify-between items-center">
+          {/* Logo / Brand */}
+          <div className="text-xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors duration-300">
+            Asep <span className="text-indigo-500 dark:text-indigo-400">Nurdin</span>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6">
-
-            <a
-              href="#"
-              className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 hover:underline dark:hover:text-indigo-400 font-medium"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 hover:underline dark:hover:text-indigo-400 font-medium"
-            >
-              About
-            </a>
-            <a
-              href="#project"
-              className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 hover:underline dark:hover:text-indigo-400 font-medium"
-            >
-              Projects
-            </a>
-            <a
-              href="#"
-              className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 hover:underline dark:hover:text-indigo-400 font-medium"
-            >
-              Blog
-            </a>
-            <a
-              href="#contact"
-              className="text-gray-700 dark:text-gray-200 hover:text-indigo-600 hover:underline dark:hover:text-indigo-400 font-medium"
-            >
-              Contact
-            </a>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-1">
+            {navLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                // Jika external, buka di tab baru agar portofolio tidak tertutup
+                target={link.isExternal ? "_blank" : undefined}
+                rel={link.isExternal ? "noopener noreferrer" : undefined}
+                className="px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 rounded-xl transition-all duration-200 hover:bg-slate-900/5 dark:hover:bg-white/5 hover:text-indigo-600 dark:hover:text-indigo-400"
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
 
-          {/* Hamburger Button */}
-          <DarkModeToggle />
+          {/* Right Action Area */}
+          <div className="flex items-center space-x-4">
+            <DarkModeToggle />
 
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-gray-700 dark:text-gray-200 focus:outline-none"
-            >
-              {open ? <X size={28} /> : <Menu size={28} />}
-            </button>
+            {/* Hamburger Button */}
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={() => setOpen(!open)}
+                className="p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-900/5 dark:hover:bg-white/5 focus:outline-none transition-all"
+                aria-label="Toggle Menu"
+              >
+                {open ? <X size={22} /> : <Menu size={22} />}
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Mobile Menu */}
-        {open && (
-          <div className="md:hidden max-w-5xl mx-auto w-[90%] px-4 pb-4 space-y-2 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-b-md transition-all duration-300">
-            <a
-              href="#home"
-              onClick={() => setOpen(false)}
-              className="block text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              onClick={() => setOpen(false)}
-              className="block text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400"
-            >
-              About
-            </a>
-            <a
-              href="#projects"
-              onClick={() => setOpen(false)}
-              className="block text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400"
-            >
-              Projects
-            </a>
-            <a
-              href="#contact"
-              onClick={() => setOpen(false)}
-              className="block text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400"
-            >
-              Contact
-            </a>
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            open ? "max-h-64 opacity-100 border-t border-slate-200/20" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="px-6 py-4 space-y-1 bg-white/60 dark:bg-slate-950/60 backdrop-blur-lg rounded-b-2xl">
+            {navLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                target={link.isExternal ? "_blank" : undefined}
+                rel={link.isExternal ? "noopener noreferrer" : undefined}
+                onClick={() => setOpen(false)}
+                className="block px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 rounded-xl hover:bg-slate-900/5 dark:hover:bg-white/5 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all"
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
-        )}
+        </div>
       </nav>
     </div>
   );
