@@ -26,21 +26,49 @@ const Project = () => {
       title: "Interactive Coding Course Platform",
       desc: "Aplikasi platform manajemen pembelajaran kursus coding online, dilengkapi arsitektur RESTful API yang aman dan manajemen basis data relasional.",
       tech: ["React.js", "Express.js", "TailwindCSS", "MySQL"],
-      link: "https://kursus-coding.vercel.app/",
+      link: "#",
     },
     {
       img: "./img/project/4.png",
       title: "Point of Sales (POS) Culinary System",
       desc: "Sistem kasir berbasis web real-time untuk optimalisasi manajemen pesanan pelanggan, pencatatan transaksi kas, dan rekapitulasi keuangan.",
       tech: ["HTML5", "TailwindCSS", "JavaScript ESM"],
-      link: "https://bntea-culinary.vercel.app/",
+      link: "#",
     },
     {
       img: "./img/project/3.png",
       title: "E-Commerce Hijab Aulia Integration",
       desc: "Sistem toko online hijab modern terintegrasi katalog dinamis, sistem manajemen konten, dan fitur tutorial interaktif.",
       tech: ["PHP", "TailwindCSS", "MySQL Infrastructure"],
-      link: "https://hijabaulia.42web.io/index.php?i=2",
+      link: "#",
+    },
+    {
+      img: "/img/project/elhaza.png", // Simpan gambar screenshot di public/img/project/elhazastore.png
+      title: "Elhazastore (E-Commerce Korset Kesehatan)",
+      desc: "Landing page & katalog produk interaktif untuk toko e-commerce korset kesehatan pinggang ergonomis. Dibangun menggunakan Next.js App Router dan Tailwind CSS dengan fitur ulasan pembeli terverifikasi, panduan ukuran, serta integrasi pemesanan langsung via WhatsApp.",
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+      link: "https://elhazastore.com", // Sesuaikan dengan domain / link produksi Anda
+    },
+    {
+      img: "/img/project/sudutlawass.png", // Simpan screenshot di public/img/project/sudutlawas.png
+      title: "Sudutlawas (Toko Online Apparel Harley)",
+      desc: "Platform toko online e-commerce yang menjual pakaian, aksesori, dan perlengkapan bernuansa klasik/vintage khusus penggemar Harley-Davidson. Dibangun dengan PHP Laravel dan Laravel Breeze untuk autentikasi sistem yang aman, serta dikemas dengan tampilan UI kustom menggunakan Tailwind CSS.",
+      tech: ["PHP", "Laravel", "Laravel Breeze", "Tailwind CSS", "MySQL"],
+      link: "https://sudutlawas.com", // Sesuaikan dengan domain/link demo Anda
+    },
+    {
+      img: "/img/project/uhamka.png", // Simpan screenshot di public/img/project/sudutlawas.png
+      title: "Uhamka Agrovision: Peternakan Domba Modern Jonggol",
+      desc: "Landing page interaktif untuk manajemen distribusi domba jantan berkualitas langsung dari kandang Jonggol. Dilengkapi katalog harga transparan berdasarkan bobot riil (Dugul & Tanduk), pengelompokan varian tipe berat badan, serta fitur konversi order instan ke admin penjualan.",
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+      link: "https://uhamka-agrovision.vercel.app/", // Sesuaikan dengan domain/link demo Anda
+    },
+    {
+      img: "/img/project/mahakaryadigital.png", // Simpan screenshot di public/img/project/sudutlawas.png
+      title: "Mahakarya Digital",
+      desc: "Mahakarya Digital hadir sebagai studio rekayasa piranti lunak (*software house*) independen yang berdedikasi menjadi katalis utama transformasi digital bagi para pelaku usaha, UMKM, hingga korporasi di Indonesia. Kami percaya bahwa setiap entitas bisnis berhak memiliki infrastruktur digital yang kokoh, eksklusif, dan andal di pasar global. Melalui komitmen rekayasa kode yang presisi, kami siap memanifestasikan platform terbaik untuk bisnis Anda.",
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+      link: "#", // Sesuaikan dengan domain/link demo Anda
     },
     {
       img: "./img/project/auth.png",
@@ -62,7 +90,7 @@ const Project = () => {
       desc: "Sebuah blog pribadi yang dibangun full-stack dengan Golang sebagai backend, Next.JS sebagai frontend, dan MySQL sebagai database. Dilengkapi dengan Cloudflare Tunnel untuk eksposur jaringan yang aman serta JWT Authentication.",
       tech: ["Go", "Next.js", "MySQL", "Docker", "Cloudflare", "JWT"],
       link: "https://asepblog.my.id/",
-    },
+    },    
   ];
 
   const visibleProjects = showAll ? projectsData : projectsData.slice(0, 6);

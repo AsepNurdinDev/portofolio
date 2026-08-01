@@ -40,18 +40,18 @@ function App() {
               className="flex items-center space-x-4 backdrop-blur-md bg-white/40 dark:bg-slate-900/40 p-3 rounded-2xl border border-white/20 dark:border-slate-800/60 shadow-lg shadow-slate-950/5 w-fit"
             >
               <img
-                src="../img/profile.jpg"
-                alt="Foto Asep"
+                src="/img/mahakaryadigitallogo.jpeg"
+                alt="Foto Asep Nurdin"
                 className="w-10 h-10 rounded-xl object-cover border border-indigo-500/30 shadow-inner"
               />
               <div className="pr-2">
                 <p className="text-xs font-bold text-slate-800 dark:text-slate-200 tracking-wider uppercase">
-                  Backend & DevOps Engineer
+                  Founder & Software Engineer
                 </p>
                 <div className="flex items-center gap-1.5 mt-0.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                   <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
-                    Available for Projects
+                    Mahakarya Digital
                   </p>
                 </div>
               </div>
@@ -67,8 +67,8 @@ function App() {
                 <ReactTyped
                   strings={[
                     "Asep Nurdin.",
-                    "Backend Dev.",
-                    "DevOps Engineer.",
+                    "Founder Mahakarya Digital.",
+                    "Fullstack & DevOps Engineer.",
                   ]}
                   typeSpeed={80}
                   backSpeed={60}
@@ -79,31 +79,31 @@ function App() {
               </span>
             </h1>
 
-            {/* Deskripsi Karir Berbobot Profesional */}
+            {/* Deskripsi Singkat Berbobot */}
             <p
               data-aos="fade-up"
               data-aos-delay="100"
               className="text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed font-normal"
             >
-              Mahasiswa Ilmu Komputer yang fokus membangun arsitektur backend berkinerja tinggi, manajemen kontainer, serta otomatisasi pipeline infrastruktur cloud. Berpengalaman mentransformasikan logika sistem kompleks menjadi platform digital yang skalabel dan andal.
+              Software Engineer sekaligus Founder dari <strong>Mahakarya Digital</strong>. Berfokus mendampingi bisnis dan instansi mengembangkan aplikasi web performa tinggi, infrastruktur backend yang andal, serta solusi cloud modern.
             </p>
-{/* Tombol Aksi Modern */}
-<div className="flex flex-wrap gap-4 pt-2" data-aos="fade-up" data-aos-delay="200">
-  <a
-    className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-700 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/10 transition-all duration-300 hover:opacity-95 hover:scale-[1.02] active:scale-[0.98]"
-    // PERBAIKAN: Mengarah langsung ke file di root folder public
-    href="/CV_ASEP_NURDIN.pdf" 
-    download="CV_ASEP_NURDIN.pdf"
-  >
-    Download CV
-  </a>
-  <a
-    className="inline-flex items-center justify-center rounded-xl border border-slate-200 dark:border-slate-800/80 backdrop-blur-sm bg-white/20 dark:bg-slate-900/20 px-6 py-3 text-sm font-semibold text-slate-700 dark:text-slate-300 shadow-sm transition-all duration-300 hover:bg-slate-100/50 dark:hover:bg-slate-900/50 hover:text-slate-950 dark:hover:text-white hover:scale-[1.02] active:scale-[0.98]"
-    href="#project"
-  >
-    Lihat Project
-  </a>
-</div>
+
+            {/* Tombol Aksi Modern */}
+            <div className="flex flex-wrap gap-4 pt-2" data-aos="fade-up" data-aos-delay="200">
+              <a
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-700 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/10 transition-all duration-300 hover:opacity-95 hover:scale-[1.02] active:scale-[0.98]"
+                href="/CV_ASEP_NURDIN.pdf" 
+                download="CV_ASEP_NURDIN.pdf"
+              >
+                Download CV
+              </a>
+              <a
+                className="inline-flex items-center justify-center rounded-xl border border-slate-200 dark:border-slate-800/80 backdrop-blur-sm bg-white/20 dark:bg-slate-900/20 px-6 py-3 text-sm font-semibold text-slate-700 dark:text-slate-300 shadow-sm transition-all duration-300 hover:bg-slate-100/50 dark:hover:bg-slate-900/50 hover:text-slate-950 dark:hover:text-white hover:scale-[1.02] active:scale-[0.98]"
+                href="#project"
+              >
+                Lihat Project
+              </a>
+            </div>
           </div>
 
           {/* KOLOM KANAN - FOTO UTAMA */}
@@ -116,7 +116,7 @@ function App() {
             <div className="relative group w-72 h-72 sm:w-80 sm:h-80 rounded-3xl overflow-hidden p-[1px] bg-gradient-to-b from-indigo-500/30 to-transparent dark:from-slate-800 dark:to-transparent shadow-2xl transition-all duration-500 hover:scale-[1.02]">
               <div className="w-full h-full rounded-3xl overflow-hidden bg-slate-100 dark:bg-slate-900">
                 <img
-                  src="../img/dsc_3883.png"
+                  src="/img/dsc_3883.png"
                   alt="Asep Nurdin"
                   className="w-full h-full object-cover filter saturate-[0.9] contrast-[1.02]"
                 />
