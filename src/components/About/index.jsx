@@ -117,7 +117,7 @@ const About = () => {
             {/* LINK EKSKLUSIF KE WEBSITE MAHAKARYA DIGITAL */}
             <div className="mt-8 pt-2">
               <a
-                href="https://mahakaryadigital.id"
+                href="https://www.mahakaryadigital.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 px-5 py-3 rounded-xl transition-all duration-300 shadow-lg shadow-indigo-600/25 hover:shadow-indigo-500/35 hover:-translate-y-0.5"

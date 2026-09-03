@@ -20,7 +20,7 @@ const Navbar = () => {
     { name: "Home", href: "#", isExternal: false },
     { name: "About", href: "#about", isExternal: false },
     { name: "Projects", href: "#project", isExternal: false }, // Diarahkan ke ID seksi internal
-    { name: "Blog", href: "https://asepblog.my.id/", isExternal: true }, // Diarahkan ke domain blog kamu
+    { name: "Blog", href: "https://asepblog.online/", isExternal: true }, // Diarahkan ke domain blog kamu
     { name: "Contact", href: "#contact", isExternal: false },
   ];
 
